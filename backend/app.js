@@ -3,7 +3,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 const app = express();
 const {OAuth2Client} = require('google-auth-library');
-const userRoutes = require('./routes/rusers.js')
+
 // const authRouter = require('./routes/oauth')
 // const requestRouter = require('./routes/request')
 
@@ -37,7 +37,6 @@ app.post('/auth/google/refresh-token', async (req, res) => {
 })
 
 
-app.use('/users', userRoutes)
 // app.use('/oauth', authRouter);
 // app.use('/request', requestRouter);
 
