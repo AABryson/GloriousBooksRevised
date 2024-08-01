@@ -14,7 +14,7 @@ const Callback = () => {
 
     // Send code to backend for tokens
     if (code) {
-      axios.post('http://localhost:3001/auth/google', { code })
+      axios.post('https://render-1-u92k.onrender.com/auth/google', { code })
         .then(response => {
           // Handle tokens, save them, etc.
           console.log('Tokens:', response.data);

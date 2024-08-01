@@ -12,7 +12,7 @@ function Signup() {
     const { user, setUser } = useContext(ContextObject)
     const { authToken, setAuthToken } = useContext(ContextObject)
 
-    let baseURL = 'http://localhost:3001'
+    let baseURL = 'https://render-1-u92k.onrender.com'
     //post request to api; includes user info
     async function sendInfo(user) {
         let response = await axios.post(`${baseURL}/users/signup`, user)

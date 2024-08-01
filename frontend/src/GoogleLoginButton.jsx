@@ -15,7 +15,7 @@ const GoogleLoginButton = () => {
     onSuccess: async (codeResponse) => {
       try {
         // Exchange the authorization code for tokens with backend
-        const response = await axios.post('http://localhost:3001/auth/google', {
+        const response = await axios.post('https://render-1-u92k.onrender.com/auth/google', {
           code: codeResponse.code,
         });
         // Handle the tokens received from backend and store in authToken state
