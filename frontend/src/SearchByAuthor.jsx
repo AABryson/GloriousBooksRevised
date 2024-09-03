@@ -1,8 +1,7 @@
-//Checked
+
 import React, {useState, useContext} from 'react'
 import axios from 'axios'
 import ContextObject from './ContextObject'
-// import {NavLink} from 'react-router-dom'
 import './SearchByAuthor.css'
 
 function SearchByAuthor() {

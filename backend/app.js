@@ -3,9 +3,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 const app = express();
 const {OAuth2Client} = require('google-auth-library');
-
-// const authRouter = require('./routes/oauth')
-// const requestRouter = require('./routes/request')
+require('dotenv').config()
 
 app.use(cors());
 app.use(express.json());
@@ -13,11 +11,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan("tiny"));
 
 
+//create new object instance of oauth2client class
 const oAuth2Client = new OAuth2Client(
-    CLIENT_ID = '317428792953-lhgk1b018qbomhpfq4cbmu1u7aaujiv1.apps.googleusercontent.com',
-    CLIENT_SECRET = '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',
-    'postmessage',
+  //CLIENT_ID and CLIENT_SECRET were supplied by google when I registered the app.
+  process.env.CLIENT_ID,
+  process.env.CLIENT_SECRET,
+  'postmessage'
 );
+
 
 app.post('/auth/google', async (req, res) => {
   const { tokens } = await oAuth2Client.getToken(req.body.code); // exchange code for tokens
@@ -36,9 +37,6 @@ app.post('/auth/google/refresh-token', async (req, res) => {
   res.json(credentials);
 })
 
-
-// app.use('/oauth', authRouter);
-// app.use('/request', requestRouter);
 
 
 
