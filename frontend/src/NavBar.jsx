@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 import GoogleLogoutButton from './GoogleLogoutButton';
 import GoogleLoginButton from './GoogleLoginButton';
 import ContextObject from './ContextObject'
+import './NavBar.css'
 
 
 function NavBar() {
@@ -12,29 +13,29 @@ function NavBar() {
 
     return (
         <nav className='navbar navbar-expand-lg navbar-dark bg-dark' style={{width:'100%'}}>
-            <h5 className='navbar-brand' style={{marginLeft:'10px'}}>Glorious Books</h5>
+            <h5 className='navbar-brand' id='brandName'>Glorious Books</h5>
             <div className='collapse navbar-collapse' id='navbarNav'>  
                 
-                <ul className='navbar-nav me-auto'>
+                <ul className='navbar-nav' id='leftTitlesSection'>
                     <li className='nav-item'>
-                    <NavLink to='/' className='nav-link' style={{ color: 'white' }}>Home</NavLink>
+                    <NavLink to='/' className='nav-link' id='navlink'>Home</NavLink>
                     </li>
                     <li className='nav-item'>
-                        <NavLink to='/author' className='nav-link' style={{ color: 'white' }}>Author</NavLink>
+                        <NavLink to='/author' className='nav-link' id='navlink'>Author</NavLink>
                     </li>
                     <li className='nav-item'>
-                        <NavLink to='/subject' className='nav-link' style={{ color: 'white' }}>Subject</NavLink>
+                        <NavLink to='/subject' className='nav-link' id='navlink'>Subject</NavLink>
                     </li>
                     <li className='nav-item'>
-                        <NavLink to='/title' className='nav-link' style={{ color: 'white' }}>Title</NavLink>
+                        <NavLink to='/title' className='nav-link' id='navlink'>Title</NavLink>
                     </li>
 
                     <li className='nav-item'>
-                        <NavLink to='/library' className='nav-link' style={{ color: 'white' }}>Library</NavLink>
+                        <NavLink to='/library' className='nav-link' id='navlink'>Library</NavLink>
                     </li>
                 </ul>
 
-                <ul className='nav navbar-nav ms-auto' style={{marginRight: '30px', alignItems:'center'}}>
+                <ul id='googleSignIn'>
                     {/* <li className='nav-item'>
                         <NavLink to='/login' className='nav-link' style={{ color: 'white' }}>Login</NavLink>
                     </li>
@@ -42,7 +43,7 @@ function NavBar() {
                         <NavLink to='/signup' className='nav-link' style={{ color: 'white' }}>Signup</NavLink>
                     </li> */}
                 {!loggedIn ? (
-                    <li><GoogleLoginButton /></li>
+                    <li id='googleLoginButton'><GoogleLoginButton /></li>
                     
                     ) : (
                     <li><GoogleLogoutButton /></li>

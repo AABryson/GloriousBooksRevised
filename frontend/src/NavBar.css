@@ -1,0 +1,43 @@
+
+#brandName {
+    margin-left: .5vmax;
+
+}
+
+
+#navbarNav {
+    display: flex;
+    flex-direction: row;
+}
+
+#leftTitlesSection {
+    width: 30vmax;
+
+
+}
+
+#navlink {
+    color: white;
+
+}
+
+#googleSignIn {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: end;
+
+    padding: 0;
+    margin: 0;
+}
+
+#googleLoginButton {
+    margin-right: 1vmax;
+  
+}
+
+button {
+    width: 15vmax;
+
+}
+
