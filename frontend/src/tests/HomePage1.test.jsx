@@ -1,10 +1,11 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 import HomePage1 from '../HomePage1'
 import {MemoryRouter} from 'react-router-dom'
+//browserRouter interacts with the address bar, MemoryRouter doesn't have access to url or browser history.  Manages navigation in memory.
+
 
 test('test title', () => {
     render(
-        
         <MemoryRouter>
             <HomePage1 />
         </MemoryRouter>
