@@ -50,7 +50,7 @@
 
 #images {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap; /* Allows images to wrap to the next line */
     flex: 1 1 30%; /* Adjusts the size of the images */
     max-width: 100%; /* Ensures images don’t overflow the container */
@@ -117,7 +117,7 @@
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXAuN768fPEweXUZnIVOy0r7U7FjNl1Wgm5g&s);
     background-size: cover;
     height: 100% !important;
-    width: 30% !important;
+    width: 27% !important;
     filter: brightness(.9);
     filter: contrast(.9);
     padding: 0;
@@ -128,7 +128,7 @@
 #titleImage {
     background-image: url(https://images.pexels.com/photos/7085834/pexels-photo-7085834.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
     height: 100%;
-    width: 30%;
+    width: 27%;
     background-size: cover;
     filter: brightness(.9);
     filter: contrast(.9);
@@ -139,11 +139,12 @@
 #subjectImage {
     background-image: url(https://www.5w1hmethod.com/wp-content/uploads/2023/01/The-Thinker.jpg);
     height: 100%;
-    width: 30%;
+    width: 27%;
     background-size: cover;
     background-position: center;
     filter: brightness(.9);
     filter: contrast(.9);
+    filter: grayscale(.4);
     padding: 0;
    
 

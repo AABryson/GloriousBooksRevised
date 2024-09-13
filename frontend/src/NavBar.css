@@ -1,6 +1,6 @@
 
 #brandName {
-    margin-left: .5vmax;
+    margin-left: 2vmax;
 
 }
 
@@ -12,6 +12,7 @@
 
 #leftTitlesSection {
     width: 30vmax;
+    margin-left: 3vmax;
 
 
 }
@@ -33,6 +34,7 @@
 
 #googleLoginButton {
     margin-right: 1vmax;
+    
   
 }
 

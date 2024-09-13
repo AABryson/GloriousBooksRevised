@@ -2,8 +2,9 @@ import React, {useContext, useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
 import ContextObject from './ContextObject'
 import axios from 'axios'
+// import "./UserBooks.css"
 
-function SearchBooks() {
+function UserBooks() {
 
     const params = useParams()
     console.log('params', params)
@@ -85,7 +86,7 @@ function SearchBooks() {
                         <div className='col-10 border-start'>
                             <p className='card-text'>{item.volumeInfo.description}</p>
                         </div>
-                        <div className='col-2 text-center'>
+                        <div className='col-2 text-center' data-testid='test-img'>
                             {item.volumeInfo.imageLinks && item.volumeInfo.imageLinks.thumbnail ? (
                                 <img src={item.volumeInfo.imageLinks.thumbnail} alt="Thumbnail" />
                             ) : (
@@ -98,15 +99,19 @@ function SearchBooks() {
                 <div className='card-footer border-top border-danger'>
                     <div className='row'>
                         <div className='col-3'>
-                            <h5 style={{ fontSize: '14px' }}>Purchase from</h5>
-                            <div className='row'>
-                                <div className='col-3'>
-                                    {item.saleInfo.buyLink ? (
-                                        <a href={item.saleInfo.buyLink} className='card-link btn' style={{ backgroundColor: '#1B1B1F', color: 'white', fontSize: '10px' }}>Google</a>
-                                    ) : null}
-                                </div>
-                            </div>
+                        {item.saleInfo.buyLink ? (
+                                <>
+                                <h5 style={{ fontSize: '14px' }}>Purchase from</h5>
+                                    <div className='row'>
+                                        <div className='col-3'>
+                                            <a href={item.saleInfo.buyLink} className='card-link btn' id='cardLinkBtn'>Google</a>
+                                        </div>
+                                    </div>
+                                </>
+                                ) : (
+                                null)}
                         </div>
+
                         <div className='col-3'>
                             <h5 style={{ fontSize: '14px' }}>Preview</h5>
                             <div className='row'>
@@ -147,4 +152,4 @@ function SearchBooks() {
     )
 }
 
-export default SearchBooks
+export default UserBooks

@@ -1,6 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 import HomePage1 from '../HomePage1'
-import ContextObject from '../ContextObject'
 import {MemoryRouter} from 'react-router-dom'
 
 test('test title', () => {
@@ -28,7 +27,7 @@ test('test link to author', () => {
     )
     const link = screen.getByRole('link', {name: 'Author'})
     console.log(link)
-    expect(link).toHaveAttribute('href', '/author')
+    expect(link).toHaveAttribute('href', '/search/Author')
 })
 
 test('element contains other element', () => {
@@ -85,5 +84,5 @@ test('click on <Link>', () => {
     )
     const link = screen.getByRole('link', {name: 'Subject'})
     fireEvent.click(link)
-    expect(link).toHaveAttribute('href', '/subject')
+    expect(link).toHaveAttribute('href', '/search/Subject')
 })

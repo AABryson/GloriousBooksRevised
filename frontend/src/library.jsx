@@ -9,7 +9,7 @@ function SearchBookshelves() {
     const [shelves, setShelves] = useState([]);
     const [books, setBooks] = useState([]);
     const {authToken, setAuthToken} = useContext(ContextObject)
-    console.log(authToken)
+    // console.log(authToken)
     const apiKey = 'AIzaSyBJo7SCNGuT27ZbgzdgO0R9t-UT4nrERsA';
 
     async function getShelves() {
@@ -50,8 +50,12 @@ function SearchBookshelves() {
         <div className='container-fluid' id='containerLibrary'>
             <div className='row'> 
                 <div className='col-12 p-0'>
+                    {/* <h1 className='text-end p-5' id='mainTitle'>Your Library</h1> */}
+                    {authToken ? (
                     <h1 className='text-end p-5' id='mainTitle'>Your Library</h1>
-                    
+                    ) : ( <h1 className='text-end p-5' id='mainTitle'>Please sign in to Google</h1>
+                    )}
+
                 </div>
             </div>
 

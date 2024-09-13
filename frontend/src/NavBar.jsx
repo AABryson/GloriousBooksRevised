@@ -21,13 +21,13 @@ function NavBar() {
                     <NavLink to='/' className='nav-link' id='navlink'>Home</NavLink>
                     </li>
                     <li className='nav-item'>
-                        <NavLink to='/author' className='nav-link' id='navlink'>Author</NavLink>
+                        <NavLink to='/search/Author' className='nav-link' id='navlink'>Author</NavLink>
                     </li>
                     <li className='nav-item'>
-                        <NavLink to='/subject' className='nav-link' id='navlink'>Subject</NavLink>
+                        <NavLink to='search/Subject' className='nav-link' id='navlink'>Subject</NavLink>
                     </li>
                     <li className='nav-item'>
-                        <NavLink to='/title' className='nav-link' id='navlink'>Title</NavLink>
+                        <NavLink to='/search/Title' className='nav-link' id='navlink'>Title</NavLink>
                     </li>
 
                     <li className='nav-item'>
